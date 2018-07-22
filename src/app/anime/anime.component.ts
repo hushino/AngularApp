@@ -27,7 +27,7 @@ export class AnimeComponent implements OnInit {
 
   onShowAnime(id: number){
     this.dataService.showAnimeById(id).subscribe(data => {
-      this.AnimeList2 = data;
+     // this.AnimeList2 = data;
       
     })
     this.router.navigate(['/Show', id])

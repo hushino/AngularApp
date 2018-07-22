@@ -1,7 +1,7 @@
 <!-- <div (click)="onSelect(animeList.id)" *ngFor="let animeList of AnimeList"
 [class.selected]="animeList.id === selectedId"> -->
 
-<div (click)="onSelect(animeList)" *ngFor="let animeList of AnimeList | async"
+<div (click)="onSelect(animeList)" *ngFor="let animeList of AnimeList "
 >
  <!-- <button [routerLink]="['/Show',animeList.id]" >Click</button>
    <button routerLink="/Show?id=/{{animeList.id}}">Go to sidekicks</button> -->
