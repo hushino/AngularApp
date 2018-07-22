@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../data.service';
+import { Router, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-anime-by-id',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimeByIdComponent implements OnInit {
 
-  constructor() { }
+  AnimeList = [];
+  id: number = 5;
+  
+  constructor(private dataService : DataService,private route: ActivatedRoute) { 
+  }
 
   ngOnInit() {
+ 
+   /*  this.dataService.showAnimeById(this.id).subscribe(data => {
+      //console.log(data)
+    }) */
   }
 
 }

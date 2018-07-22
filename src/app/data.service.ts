@@ -22,7 +22,6 @@ export class DataService {
    }
 
    showAnimeById(id:number){
-    return this.http.get<AnimeList[]>('http://localhost:8080/RedOver/Show?id='+id)
+   return this.http.get('http://localhost:8080/RedOver/Show?id='+id)
    }
-
 }

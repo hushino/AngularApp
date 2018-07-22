@@ -12,12 +12,13 @@ export class HomeComponent implements OnInit {
 
   constructor(private dataService: DataService){
     this.dataService.getDataHome().subscribe(data => {
-     // console.log(data)
-     this.capsHome = data;
-    });
+      // console.log(data)
+      this.capsHome = data;
+ });
   }
 
   ngOnInit() {
+    this.dataService.getDataHome();
   }
 
 }

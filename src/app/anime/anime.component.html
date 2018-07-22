@@ -1,9 +1,15 @@
-<div (click)="onSelect(animeList)" *ngFor="let animeList of AnimeList"
-[class.selected]="animeList.id === selectedId">
-<a></a>
-    <!-- <button routerLink="/Show?id=/{{animeList.id}}">Go to sidekicks</button> -->
+<!-- <div (click)="onSelect(animeList.id)" *ngFor="let animeList of AnimeList"
+[class.selected]="animeList.id === selectedId"> -->
+
+<div (click)="onSelect(animeList)" *ngFor="let animeList of AnimeList | async"
+>
+ <!-- <button [routerLink]="['/Show',animeList.id]" >Click</button>
+   <button routerLink="/Show?id=/{{animeList.id}}">Go to sidekicks</button> -->
+
+   <button (click)="onShowAnime(animeList.id)">Ver</button>
+     
+ 
   <h3>{{animeList.title}}</h3>
   <h3>{{animeList.type}}</h3>
   <img src="{{animeList.backgroundimage}}" alt="{{animeList.title}}" style="max-width: 200px;" >
-  
-</div>
+</div> 
