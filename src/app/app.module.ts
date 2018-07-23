@@ -6,12 +6,14 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Route } from '@angular/router'
 import { DataService } from './data.service';
 import { AnimeComponent } from './anime/anime.component';
-import { AnimeByIdComponent } from './anime-by-id/anime-by-id.component';
+import { AnimeDetailComponent }  from './anime-by-id/anime-detail.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Route[] = [
   {path: '', component: HomeComponent},
   {path: 'animes', component: AnimeComponent},
-  {path: 'Show/:id', component: AnimeByIdComponent}
+  { path: 'showanime/:id', redirectTo: '/animeStats/:id' },
+  { path: 'animeStats/:id', component: AnimeDetailComponent }
 ];
 
 @NgModule({
@@ -19,12 +21,13 @@ const routes: Route[] = [
     AppComponent,
     HomeComponent,
     AnimeComponent,
-    AnimeByIdComponent
+    AnimeDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
