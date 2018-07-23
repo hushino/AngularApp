@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Route } from '@angular/router'
 import { DataService } from './data.service';
 import { AnimeComponent } from './anime/anime.component';
-import { AnimeDetailComponent }  from './anime-by-id/anime-detail.component';
+import { AnimeDetailComponent }  from './anime-by-id/anime-by-id.component';
 import { FormsModule } from '@angular/forms';
 
 const routes: Route[] = [

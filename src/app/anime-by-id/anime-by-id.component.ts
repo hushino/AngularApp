@@ -6,15 +6,7 @@ import {DataService,Anime} from '../data.service';
 
 
 @Component({
-    template: `
-    <h2>Anime info</h2>
-    <div *ngIf="anime | async as animes">
-      <h3>"{{ animes.title }}"</h3>
-      <div>
-        <label>Id: </label>{{ animes.id }}</div>
-      
-    </div>
-    `,
+    templateUrl:'./anime-by-id.component.html'
   })
   export class AnimeDetailComponent implements OnInit {
      
@@ -30,7 +22,6 @@ import {DataService,Anime} from '../data.service';
         switchMap((params: ParamMap) =>
           this.service.getAnime(params.get('id')))
       );
-      
     }
   }
   
