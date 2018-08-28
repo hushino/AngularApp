@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     this.dataService.getDataHome().subscribe(data => {
       // console.log(data)
       this.capsHome = data;
- });
+    });
   }
 
   ngOnInit() {

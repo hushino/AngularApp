@@ -10,8 +10,8 @@ import { AnimeDetailComponent }  from './anime-by-id/anime-by-id.component';
 import { FormsModule } from '@angular/forms';
 
 const routes: Route[] = [
-  {path: '', component: HomeComponent},
-  {path: 'animes', component: AnimeComponent},
+  { path: '', component: HomeComponent},
+  { path: 'animes', component: AnimeComponent},
   { path: 'showanime/:id', redirectTo: '/animeStats/:id' },
   { path: 'animeStats/:id', component: AnimeDetailComponent }
 ];
@@ -21,7 +21,7 @@ const routes: Route[] = [
     AppComponent,
     HomeComponent,
     AnimeComponent,
-    AnimeDetailComponent
+    AnimeDetailComponent 
   ],
   imports: [
     BrowserModule,

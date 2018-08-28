@@ -26,14 +26,17 @@ export class DataService {
    }
 
    getDataHome(){
-     return this.http.get<CapsHome[]>('http://localhost:8080/RedOver/')
+     return this.http.get<CapsHome[]>('http://localhost:8080/v1/')
    }
 
    getDataAnimeList(){
-    return this.http.get<AnimeList[]>('http://localhost:8080/RedOver/Anime')
+    return this.http.get<AnimeList[]>('http://localhost:8080/v1/animes/')
    }
+/* showAnimeById(id:number){
+   return this.http.get<ShowById[]>('http://localhost:8080/RedOver/Show?id='+id)
+   } */
 
    showAnimeById(id:number){
-   return this.http.get<ShowById[]>('http://localhost:8080/RedOver/Show?id='+id)
+   return this.http.get<ShowById[]>('http://localhost:8080/v1/animes/'+id)
    }
 }
