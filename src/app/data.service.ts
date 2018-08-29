@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class Anime {
   constructor() { }
 }
- 
+
 
 @Injectable({
   providedIn: 'root'

@@ -22,6 +22,7 @@ import {DataService,Anime} from '../data.service';
         switchMap((params: ParamMap) =>
           this.service.getAnime(params.get('id')))
       );
+      
     }
   }
   
